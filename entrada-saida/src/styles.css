@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #8050a4;
+    background-color: #e5e5e5;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+div.body-content{
+    width: 100%;
+}
+
+div, button, li{
+    display: inline-block;
+    border: none;
+    outline: none;
+}
+
+button{
+    display: inline-block;
+    min-height: 25px;
+    border-radius: 13px;
+    min-width: 100px;
+    color: #8050a4;
+    box-shadow: inset 0 0 0.1em #603089;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #e5e5e5;
+}
+
+button:hover{
+    box-shadow: inset 0 0 0.3em #603089;
+}
+
+input, textarea{
+    border: none;
+    outline: none;
+    background-color: #e5e5e5;
+    border-bottom: 1px solid #8050a4;
+    color: #8050a4;
+}
+
+input:focus{
+    box-shadow: 0 8px 6px -6px #8050a4;
+}
+
+input:hover{
+    box-shadow: 0 8px 6px -6px #8050a4;
+}
+
+a:hover, button:hover, li:hover{
+    cursor: pointer;
+}
+
+div.submit{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0 ;
+}

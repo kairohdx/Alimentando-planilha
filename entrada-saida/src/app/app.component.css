@@ -1,0 +1,32 @@
+div.login-page{
+    height: 100%;
+    width: 100vw;
+    text-align: center;
+    background-color: #a070c4;
+    position: absolute;
+    top: 0;
+}
+
+div.login-card{
+    background-color: #e5e5e5;
+    height: 100%;
+    width: auto;
+    min-width: 700px;
+    vertical-align: middle;
+}
+
+div.logo{
+    margin-top: 5%;
+    padding: 5% 0;
+    display: inline-block;
+    width: 100%;
+}
+a
+div.logo > svg{
+    max-width: 50px;
+    background-color: transparent;
+}
+
+div.form{
+    margin-top: 10%;
+}

@@ -1,0 +1,5 @@
+<form id="form-login">
+        <h3>{{form_json.form_title}}</h3>
+        <my-input [inputContent]="input" *ngFor= "let input of form_json.inputs" />
+        <button type="submit">{{form_json.btn_submit}}</button>
+</form>

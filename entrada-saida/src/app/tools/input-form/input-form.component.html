@@ -1,0 +1,8 @@
+<div class="input-controller">
+    <span [@inside]="label_trigger ? 'true' : 'false'" onclick="this.nextElementSibling.focus()" 
+      class="label {{(!control.valid && control.touched) && 'invalid'}}">
+        {{inputContent.label}}
+    </span>
+    <input name="{{inputContent.name}}" type="{{inputContent.type}}" required="{{inputContent.required ? 'true' : 'false'}}" [formControl]="control"
+      autocomplete="off" (focus)="onFocus()" (blur)="onBlur()">
+</div>
