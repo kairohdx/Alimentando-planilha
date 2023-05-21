@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { Injectable, isDevMode } from '@angular/core';
+import { environmentprd} from 'src/environments/environment.prod';
+import { environmentdvp } from 'src/environments/environment';
 import { PageSheet, SheetResult } from './models/page-sheet';
 import { Observable, catchError, concatMap, throwError } from 'rxjs';
 import { AuthToken } from './models/auth-token';
@@ -9,11 +10,11 @@ import { AuthToken } from './models/auth-token';
   providedIn: 'root'
 })
 export class BaseService {
-
-  url = environment.baseUrl
+  environment = isDevMode() ? environmentdvp : environmentprd
+  url = this.environment.baseUrl
   body={
-    email:environment.publicUser,
-    password:environment.publicPass
+    email:this.environment.publicUser,
+    password:this.environment.publicPass
   }
   
   constructor(private http: HttpClient) { }

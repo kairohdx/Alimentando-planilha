@@ -1,12 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { AuthToken } from 'src/app/models/auth-token';
 import { BaseService } from 'src/app/sevice.service';
 import { FormularioComponent } from 'src/app/tools/formulario/formulario.component';
 import { FormJson } from 'src/app/tools/formulario/formulario.models';
 import { InputSets } from 'src/app/tools/input-form/input-form.models';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-form-entrada',
