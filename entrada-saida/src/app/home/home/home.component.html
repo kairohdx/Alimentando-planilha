@@ -1,0 +1,15 @@
+
+<div class="form-page">
+    <div class="form-card">
+        <div class="header">
+            <div class='{{entrada ? "entrada active" : "entrada"}}' (click)="setAsEntrada()">
+                <h4>Entrada</h4>
+            </div>
+            <div class='{{!entrada ? "saida active" : "saida"}}' (click)="setAsSaida()">
+                <h4>Saida</h4>
+            </div>
+        </div>
+        <app-form-entrada *ngIf="entrada"/>
+        <app-form-saida *ngIf="!entrada"/>
+    </div>
+</div>

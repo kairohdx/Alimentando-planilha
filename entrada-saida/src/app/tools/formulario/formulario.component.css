@@ -1,0 +1,28 @@
+
+button span{
+    display: none;
+    animation: spin 1s linear infinite;
+    margin-left: 0.5rem;
+    height: 7px;
+    width: 7px;
+    background-color: #8050a4;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+button:disabled, button[disabled]{
+    background-color: rgba(128, 80, 164, 0.4);
+    cursor: wait;
+}
+
+button:disabled span, button[disabled] span {
+    display: inline-block;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

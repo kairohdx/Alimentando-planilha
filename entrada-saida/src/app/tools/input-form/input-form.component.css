@@ -2,6 +2,7 @@ div.input-controller{
     width: 100%;
     padding: 10px;
     height: 66px;
+    display: block;
 }
 
 div.input-controller > input{

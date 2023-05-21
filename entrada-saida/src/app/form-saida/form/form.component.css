@@ -1,0 +1,15 @@
+div.logo{
+    margin-top: 5%;
+    padding: 5% 0;
+    display: inline-block;
+    width: 100%;
+}
+a
+div.logo > svg{
+    max-width: 50px;
+    background-color: transparent;
+}
+
+div.form{
+    margin-top: 10%;
+}

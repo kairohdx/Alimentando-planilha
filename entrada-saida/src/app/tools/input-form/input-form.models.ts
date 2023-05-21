@@ -6,5 +6,6 @@ export interface InputSets{
     label: string,
     value?: string | boolean
     required?: boolean
+    valid: boolean
 }
   

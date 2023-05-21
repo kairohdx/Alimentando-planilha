@@ -1,5 +1,5 @@
 import { FormControl, ValidatorFn, Validators } from '@angular/forms';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { InputSets } from './input-form.models';
 
@@ -21,7 +21,8 @@ export class InputFormComponent implements OnInit {
   public control:FormControl = new FormControl('', {updateOn:'blur'});
 
   @Input() public inputContent!: InputSets;
-  
+
+  @Output("onSubmitChange") private onSubmitChange = new EventEmitter<InputSets>
 
   ngOnInit(): void {
     this.inputContent.type === 'email' && this.control.addValidators(Validators.email)
@@ -34,8 +35,18 @@ export class InputFormComponent implements OnInit {
   }
 
   onBlur(){
-    console.log(this.control.value.trim().length === 0)
     this.label_trigger = this.control.value.trim().length === 0
+    if(this.control.valid){
+      this.inputContent.value = this.control.value.trim()
+    }
+  }
+
+  onSubmit(){
+    if(this.control.valid){
+      this.inputContent.value = this.control.value.trim()
+    }else{
+      this.control.markAllAsTouched()
+    }
   }
 
 }

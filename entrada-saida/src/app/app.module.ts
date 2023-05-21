@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +10,9 @@ import { FormSaidaComponent } from './form-saida/form/form.component';
 import { FormularioComponent } from './tools/formulario/formulario.component';
 import { InputFormComponent } from './tools/input-form/input-form.component';
 import { CarregandoComponent } from './tools/carregando/carregando.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { HomeComponent } from './home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +21,17 @@ import { CarregandoComponent } from './tools/carregando/carregando.component';
     FormSaidaComponent,
     FormularioComponent,
     InputFormComponent,
-    CarregandoComponent
+    CarregandoComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

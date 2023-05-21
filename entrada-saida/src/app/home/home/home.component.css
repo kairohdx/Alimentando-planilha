@@ -1,0 +1,55 @@
+div.form-page{
+    height: 100%;
+    width: 100vw;
+    text-align: center;
+    background-color: #a070c4;
+    position: absolute;
+    top: 0;
+    display: inline;
+}
+
+div.form-card{
+    background-color: #e5e5e5;
+    height: 100%;
+    width: auto;
+    min-width: 700px;
+    vertical-align: middle;
+}
+
+div.header{
+    width: 100%;
+    min-height: 30px;
+    background-color: #a070c4;
+    cursor: pointer;
+}
+
+div.active{
+    text-decoration: underline;
+    background-color: #e5e5e5;
+}
+
+div.entrada{
+    width: 50%;
+}
+
+div.entrada:hover{
+    background-color: #a373c7;
+}
+
+div.entrada.active:hover{
+    background-color: #e8e8e8 ;
+}
+
+div.saida{
+    width: 50%;
+}
+
+div.saida:hover{
+    background-color: #a373c7;
+}
+
+div.saida.active{
+    background-color: #e8e8e8 ;
+}
+
+
