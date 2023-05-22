@@ -18,7 +18,7 @@ export class FormSaidaComponent implements OnInit {
 
   ngOnInit(): void {
     try{
-      this.form = {form_title:'Saida', userId:"", sheetsId:"",
+      this.form = {form_title:'Saida', userId:"64692a7d8c8bea402e38af10", sheetsId:"1ziSV91-pdqneLboAI3GQla-Zfw8HXalVaVf__0YQEUc",
         inputs:[ {name:"descricao", type:"text", label:"Descrição", required:true, valid:true},
           {name:"preco", type:"number", label:"Preço", required:true, valid:true} ],
         btn_submit:"Enviar"}
@@ -40,7 +40,7 @@ export class FormSaidaComponent implements OnInit {
   submit(values:(string|boolean)[]): void {
     let body = {
       formId:"",
-      pageName: "Entrada",
+      pageName: "Saida",
       firstLine: [],
       values: values
     }
