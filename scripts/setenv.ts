@@ -15,9 +15,9 @@ const targetPath = isProduction
 // we have access to our environment variables
 // in the process.env object thanks to dotenv
 const environmentFileContent = `
-export const environment${isProduction? "prd":"dvp"} = {
+export const environment = {
    production: ${isProduction},
-   baseUrl: "${isProduction ? process.env["baseUrl"] : "localhost:3000/"}",
+   baseUrl: "${process.env["baseUrl"]}",
    publicUser: "${process.env["publicUser"]}",
    publicPass: "${process.env["publicPass"]}",
    SHEET_ID: "${process.env["SHEET_ID"]}"
