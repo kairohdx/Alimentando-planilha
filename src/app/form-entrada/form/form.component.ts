@@ -22,6 +22,7 @@ export class FormComponentEntrada implements OnInit {
     try{
       this.form = {form_title:'Entrada', userId:"64692a7d8c8bea402e38af10", sheetsId:"1ziSV91-pdqneLboAI3GQla-Zfw8HXalVaVf__0YQEUc",
         inputs:[ {name:"modelo", type:"text", label:"Modelo", required:true, valid:true},
+          {name:"Ficha", type:"text", label:"Ficha", required:true, valid:true},
           {name:"qntPares", type:"number", label:"Quantidade de pares entregue", required:true, valid:true},
           {name:"valorPar", type:"number", label:"Valor do par", required:true, valid:true} ],
         btn_submit:"Enviar"}

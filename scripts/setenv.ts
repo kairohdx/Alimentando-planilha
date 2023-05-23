@@ -17,7 +17,7 @@ const targetPath = isProduction
 const environmentFileContent = `
 export const environment${isProduction ? "prd" : "dvp"} = {
    production: ${isProduction},
-   baseUrl: "${isProduction ? process.env["baseUrl"] : "localhost:3000/"}",
+   baseUrl: "${isProduction ? process.env["baseUrl"] : "http://localhost:3000/"}",
    publicUser: "${process.env["publicUser"]}",
    publicPass: "${process.env["publicPass"]}",
    SHEET_ID: "${process.env["SHEET_ID"]}"
